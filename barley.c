@@ -18,11 +18,11 @@
 float area_of_circle(float radius); 
 
 // Now I start my code with main()
-int main() 
+int main(void) 
     {
 
     // In here I need to delare my variables
-    int totalArea = 0;      //Total area of circles
+    long totalArea = 0;      //Total area of circles
     int numberCircles = 0;  //number of circles program is calculating area for 
     int index = 0;          //index for use in for loop
     float weightLoss = 0;
@@ -31,17 +31,18 @@ int main()
     float cropYield = 0.135; //Yeild of crop per unit area in kg
     //float *rad;
 
+
     // Next I need to get input from the user.
     // I'll do this by using a printf() to ask the user to input the radii.
     printf("Enter number of crop circles: ");
-    get(numberCircles);
+    scanf("%u", &numberCircles);
 
     float rad[numberCircles];   //create array to store radii from user
 
     for(index = 0; index<numberCircles; index++)
         {
         printf("\nEnter radii of circle %i: ", index+1);
-        scanf("%f", rad[index]);
+        scanf("%f", &rad[index]);
         }
     // Now I need to loop through the radii caluclating the area for each
     for(index = 0; index<numberCircles; index++) 
@@ -66,8 +67,8 @@ int main()
 
     // Finally I'll use a printf() to print this to the screen.
     printf("\nTotal area lossed in m^2 is:\t%f\n", totalArea);
-    printf("Total loss in kg is:\t\t%f\n", weightLoss);
-    printf("Total crop lost in money is: \t\t%f\n", monetaryLoss);
+    printf("Total loss is:\t%f\nkg", weightLoss);
+    printf("Total crop lost in money is: £\t%f\n", monetaryLoss);
 
     return(0);
 }
