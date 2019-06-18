@@ -29,6 +29,7 @@ int main(void)
     float monetaryLoss = 0;
     float cropCost = 0.1; //cost of 1kg of crop in £
     float cropYield = 0.135; //Yeild of crop per unit area in kg
+    
     //float *rad;
 
 
@@ -37,7 +38,8 @@ int main(void)
     printf("Enter number of crop circles: ");
     scanf("%u", &numberCircles);
 
-    float rad[numberCircles];   //create array to store radii from user
+    float rad[numberCircles];   //create array to store radii from use
+    float singleAreas[numberCircles]; //	
 
     for(index = 0; index<numberCircles; index++)
         {
@@ -47,7 +49,7 @@ int main(void)
     // Now I need to loop through the radii caluclating the area for each
     for(index = 0; index<numberCircles; index++) 
         {
-        totalArea =+ PI * rad[index] * rad[index];
+        totalArea = totalArea + PI * rad[index] * rad[index];
         }   
     // Next I'll sum up all of the individual areas //not required :shrug:
 
