@@ -22,7 +22,7 @@ int main(void)
     {
 
     // In here I need to delare my variables
-    long totalArea = 0;      //Total area of circles
+    float totalArea = 0;      //Total area of circles
     int numberCircles = 0;  //number of circles program is calculating area for 
     int index = 0;          //index for use in for loop
     float weightLoss = 0;
@@ -67,8 +67,8 @@ int main(void)
 
     // Finally I'll use a printf() to print this to the screen.
     printf("\nTotal area lossed in m^2 is:\t%f\n", totalArea);
-    printf("Total loss is:\t%f\nkg", weightLoss);
-    printf("Total crop lost in money is: £\t%f\n", monetaryLoss);
+    printf("Total loss is:\t%fkg\n", weightLoss);
+    printf("Total crop lost in money is: \t%f pounds\n", monetaryLoss);
 
     return(0);
 }
